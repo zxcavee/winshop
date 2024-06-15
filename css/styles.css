@@ -1,0 +1,555 @@
+/* Минимальный сброс CSS стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption, blockquote, dl, dd {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%; /* Устранение проблемы изменения размера текста на мобильных устройствах */
+}
+
+
+@font-face {
+    font-display:swap;
+    font-family: 'Montserrat';
+    src: local('Montserrat Thin'), local('Montserrat-Thin'),
+    url('../fonts/Montserrat-.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-display:swap;
+    font-family: 'Montserrat';
+    src: local('Montserrat ExtraLight'), local('Montserrat-ExtraLight'),
+    url('../fonts/Montserrat-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-display:swap;
+    font-family: 'Montserrat';
+    src: local('Montserrat Light'), local('Montserrat-Light'),
+    url('../fonts/Montserrat-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-display:swap;
+    font-family: 'Montserrat';
+    src: local('Montserrat Regular'), local('Montserrat-Regular'),
+    url('../fonts/Montserrat-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-display:swap;
+    font-family: 'Montserrat';
+    src: local('Montserrat Bold'), local('Montserrat-Bold'),
+    url('../fonts/Montserrat-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Felidae';
+    src: url(../fonts/Felidae.ttf);
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 100%;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased; /* Гладкость шрифтов на экранах */
+    text-rendering: optimizeLegibility; /* Улучшенное качество отображения текста */
+}
+
+/* Header */
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: #2c6872ab;
+    z-index: 10;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100px;
+    font-size: 1.35rem;
+}
+
+.menu__nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.menu__nav a {
+    display: flex;
+    height: 100%;
+    padding: 2rem 2.5rem;
+    font-weight: 300;
+    color: #fff;
+    background-color: transparent;
+    text-decoration: none;
+    transition: background-color .5s;
+}
+
+.menu__nav a:hover {
+    background-color: #4f7279;
+}
+
+.menu__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #fff;
+    padding: 1.5rem 0;
+}
+
+.menu__contacts a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.top-line__user {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    font-size: .9rem;
+    text-align: right;
+}
+
+.top-line__user a:hover {
+    text-decoration: underline;
+}
+
+.user--mode .top-line__user-name {
+    font-weight: 400;
+    color: #111;
+}
+
+.admin--mode .top-line__user-name {
+    color: #dcf55b;
+}
+
+/* Intro */
+
+.intro {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    height: 100vh;
+    background-image: url('../images/image-4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.intro__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0000008a;
+    z-index: 0;
+}
+
+.intro__inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    z-index: 1;
+}
+
+.intro__title {
+    font-family: 'Felidae';
+    font-size: 6rem;
+    font-weight: 100;
+    letter-spacing: 11px;
+    text-align: center;
+}
+
+.intro__subtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.intro__button {
+    display: inline-block;
+    margin-top: 2rem;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding: 1rem 3rem;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: transparent;
+    transition: background-color .5s;
+}
+
+.intro__button:hover {
+    background-color: #4f7279;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    width: 100%;
+    background-color: #5ca1af;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #fff;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.section-content {
+    padding: 7rem 0;
+}
+
+/* Services */
+
+.services__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4rem;
+}
+
+@media (max-width: 1400px) {
+    .services__row {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .services__row {
+        grid-template-columns: 1fr;
+    }
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-card__image-inner {
+    width: 400px;
+    height: 400px;
+    border-radius: 200px;
+    overflow: hidden;
+}
+
+.service-card__image {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.service-card__title {
+    font-size: 1.75rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 2rem 0 1rem;
+    color: #4f7279;
+}
+
+.service-card__description {
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.25rem;
+    color: #565656;
+}
+
+/* Glass */
+
+.glass-system__row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4rem;
+}
+
+@media (max-width: 1400px) {
+    .glass-system__row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4rem;
+    }
+}
+
+.glass-card__image-inner {
+    height: 350px;
+}
+
+.glass-card__image {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.glass-card__title {
+    font-size: 1.75rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 2rem 0 1rem;
+    color: #4f7279;
+}
+
+/* Register */
+
+.register {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    color: #fff;
+    background-color: #5ca1af;
+}
+
+.register__text,
+.register__form {
+    width: 50%;
+}
+
+.register__text {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.register__text-inner {
+    max-width: 750px;
+    text-align: left;
+}
+
+.register__text h2 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+
+.register__text p {
+    font-size: 1.35rem;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+/* Forms */
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin-bottom: 1rem;
+}
+
+.form-field label {
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+
+.form-field input,
+.form-field textarea {
+    font-size: 1.125rem;
+    padding: .75rem 2rem;
+    border-radius: 30px;
+    border: 1px solid #56828b;
+}
+
+.form-action {
+    margin-top: 3rem;
+}
+
+.form-action button {
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    padding: 1.25rem 3rem;
+    font-size: 1.25rem;
+    color: #fff;
+    background-color: #4f7279;
+    transition: background-color .5s, color .5s;
+}
+
+.form-action button:hover {
+    color: #4f7279;
+    background-color: #fff;
+}
+
+.container-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.container-table {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Advantages */
+
+.advantages__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 3rem;
+}
+
+.advantage-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    width: 33.333%;
+}
+
+.advantage-card__image-inner {
+    width: 100px;
+    height: 100px;
+}
+
+.advantage-card__image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.advantage-card__title {
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-align: center;
+    color: #4f7279;
+}
+
+.advantage-card__description {
+    max-width: 300px;
+    font-size: 1.125rem;
+    text-align: center;
+}
+
+@media (max-width: 1400px) {
+    .advantage-card {
+        width: 50%;
+    }
+}
+
+/* Footer */
+
+.footer {
+    background-color: #4f7279;
+    font-size: 1.125rem;
+    font-weight: 300;
+    color: #fff;
+    padding: 4rem 0 0;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    min-height: 350px;
+}
+
+.footer-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.footer-col h3 {
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+.footer-items {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.footer-items.footer-social {
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.footer-social img {
+    width: 40px;
+    height: 40px;
+}
+
+.footer-bottom {
+    padding: 1rem 2rem;
+    color: #ddd;
+    background-color: #56828b;
+    text-align: center;
+}
+
+/* Shared */
+
+.page-content {
+    padding: 200px 0 100px;
+    min-height: 500px;
+}
+
+.page-title h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
